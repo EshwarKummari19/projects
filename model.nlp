@@ -1,0 +1,1019 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "about,chairman,me,tell,the": {
+            "intent": "get.chairman",
+            "domain": "default"
+          },
+          "campus,cmr,is,mission,of,technic,the,what": {
+            "intent": "get.mission",
+            "domain": "default"
+          },
+          "are,cours,offer,what": {
+            "intent": "get.courses",
+            "domain": "default"
+          },
+          "about,director,me,tell,the": {
+            "intent": "get.director",
+            "domain": "default"
+          },
+          "dean,do,have,we,what": {
+            "intent": "get.deans",
+            "domain": "default"
+          },
+          "admiss,are,document,the,what": {
+            "intent": "get.admission_documents",
+            "domain": "default"
+          },
+          "fee,is,structur,the,what": {
+            "intent": "get.fee_structure",
+            "domain": "default"
+          },
+          "about,librari,me,tell,the": {
+            "intent": "get.library",
+            "domain": "default"
+          },
+          "about,auditorium,the,what": {
+            "intent": "get.auditorium",
+            "domain": "default"
+          },
+          "cell,is,placement,the,train,what": {
+            "intent": "get.training_placement_cell",
+            "domain": "default"
+          },
+          "is,on,placement,team,the,who": {
+            "intent": "get.placement_team",
+            "domain": "default"
+          },
+          "about,me,member,placement,team,tell": {
+            "intent": "get.placement_team_members",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "get.chairman": "default",
+          "get.mission": "default",
+          "get.courses": "default",
+          "get.director": "default",
+          "get.deans": "default",
+          "get.admission_documents": "default",
+          "get.fee_structure": "default",
+          "get.library": "default",
+          "get.auditorium": "default",
+          "get.training_placement_cell": "default",
+          "get.placement_team": "default",
+          "get.placement_team_members": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Tell me about the chairman",
+            "intent": "get.chairman"
+          },
+          {
+            "domain": "default",
+            "utterance": "What is the mission of CMR Technical Campus?",
+            "intent": "get.mission"
+          },
+          {
+            "domain": "default",
+            "utterance": "What courses are offered?",
+            "intent": "get.courses"
+          },
+          {
+            "domain": "default",
+            "utterance": "Tell me about the director",
+            "intent": "get.director"
+          },
+          {
+            "domain": "default",
+            "utterance": "What deans do we have?",
+            "intent": "get.deans"
+          },
+          {
+            "domain": "default",
+            "utterance": "What are the admission documents?",
+            "intent": "get.admission_documents"
+          },
+          {
+            "domain": "default",
+            "utterance": "What is the fee structure?",
+            "intent": "get.fee_structure"
+          },
+          {
+            "domain": "default",
+            "utterance": "Tell me about the library",
+            "intent": "get.library"
+          },
+          {
+            "domain": "default",
+            "utterance": "What about the auditorium?",
+            "intent": "get.auditorium"
+          },
+          {
+            "domain": "default",
+            "utterance": "What is the training placement cell?",
+            "intent": "get.training_placement_cell"
+          },
+          {
+            "domain": "default",
+            "utterance": "Who is on the placement team?",
+            "intent": "get.placement_team"
+          },
+          {
+            "domain": "default",
+            "utterance": "Tell me about placement team members",
+            "intent": "get.placement_team_members"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "tell": 1,
+              "me": 1,
+              "about": 1,
+              "the": 1,
+              "chairman": 1,
+              "what": 1,
+              "is": 1,
+              "mission": 1,
+              "of": 1,
+              "cmr": 1,
+              "technic": 1,
+              "campus": 1,
+              "cours": 1,
+              "are": 1,
+              "offer": 1,
+              "director": 1,
+              "dean": 1,
+              "do": 1,
+              "we": 1,
+              "have": 1,
+              "admiss": 1,
+              "document": 1,
+              "fee": 1,
+              "structur": 1,
+              "librari": 1,
+              "auditorium": 1,
+              "train": 1,
+              "placement": 1,
+              "cell": 1,
+              "who": 1,
+              "on": 1,
+              "team": 1,
+              "member": 1
+            },
+            "intents": {
+              "get.chairman": 1,
+              "get.mission": 1,
+              "get.courses": 1,
+              "get.director": 1,
+              "get.deans": 1,
+              "get.admission_documents": 1,
+              "get.fee_structure": 1,
+              "get.library": 1,
+              "get.auditorium": 1,
+              "get.training_placement_cell": 1,
+              "get.placement_team": 1,
+              "get.placement_team_members": 1
+            },
+            "intentFeatures": {
+              "get.chairman": {
+                "tell": 1,
+                "me": 1,
+                "about": 1,
+                "the": 1,
+                "chairman": 1
+              },
+              "get.mission": {
+                "what": 1,
+                "is": 1,
+                "the": 1,
+                "mission": 1,
+                "of": 1,
+                "cmr": 1,
+                "technic": 1,
+                "campus": 1
+              },
+              "get.courses": {
+                "what": 1,
+                "cours": 1,
+                "are": 1,
+                "offer": 1
+              },
+              "get.director": {
+                "tell": 1,
+                "me": 1,
+                "about": 1,
+                "the": 1,
+                "director": 1
+              },
+              "get.deans": {
+                "what": 1,
+                "dean": 1,
+                "do": 1,
+                "we": 1,
+                "have": 1
+              },
+              "get.admission_documents": {
+                "what": 1,
+                "are": 1,
+                "the": 1,
+                "admiss": 1,
+                "document": 1
+              },
+              "get.fee_structure": {
+                "what": 1,
+                "is": 1,
+                "the": 1,
+                "fee": 1,
+                "structur": 1
+              },
+              "get.library": {
+                "tell": 1,
+                "me": 1,
+                "about": 1,
+                "the": 1,
+                "librari": 1
+              },
+              "get.auditorium": {
+                "what": 1,
+                "about": 1,
+                "the": 1,
+                "auditorium": 1
+              },
+              "get.training_placement_cell": {
+                "what": 1,
+                "is": 1,
+                "the": 1,
+                "train": 1,
+                "placement": 1,
+                "cell": 1
+              },
+              "get.placement_team": {
+                "who": 1,
+                "is": 1,
+                "on": 1,
+                "the": 1,
+                "placement": 1,
+                "team": 1
+              },
+              "get.placement_team_members": {
+                "tell": 1,
+                "me": 1,
+                "about": 1,
+                "placement": 1,
+                "team": 1,
+                "member": 1
+              }
+            },
+            "featuresToIntent": {
+              "tell": [
+                "get.chairman",
+                "get.director",
+                "get.library",
+                "get.placement_team_members"
+              ],
+              "me": [
+                "get.chairman",
+                "get.director",
+                "get.library",
+                "get.placement_team_members"
+              ],
+              "about": [
+                "get.chairman",
+                "get.director",
+                "get.library",
+                "get.auditorium",
+                "get.placement_team_members"
+              ],
+              "the": [
+                "get.chairman",
+                "get.mission",
+                "get.director",
+                "get.admission_documents",
+                "get.fee_structure",
+                "get.library",
+                "get.auditorium",
+                "get.training_placement_cell",
+                "get.placement_team"
+              ],
+              "chairman": [
+                "get.chairman"
+              ],
+              "what": [
+                "get.mission",
+                "get.courses",
+                "get.deans",
+                "get.admission_documents",
+                "get.fee_structure",
+                "get.auditorium",
+                "get.training_placement_cell"
+              ],
+              "is": [
+                "get.mission",
+                "get.fee_structure",
+                "get.training_placement_cell",
+                "get.placement_team"
+              ],
+              "mission": [
+                "get.mission"
+              ],
+              "of": [
+                "get.mission"
+              ],
+              "cmr": [
+                "get.mission"
+              ],
+              "technic": [
+                "get.mission"
+              ],
+              "campus": [
+                "get.mission"
+              ],
+              "cours": [
+                "get.courses"
+              ],
+              "are": [
+                "get.courses",
+                "get.admission_documents"
+              ],
+              "offer": [
+                "get.courses"
+              ],
+              "director": [
+                "get.director"
+              ],
+              "dean": [
+                "get.deans"
+              ],
+              "do": [
+                "get.deans"
+              ],
+              "we": [
+                "get.deans"
+              ],
+              "have": [
+                "get.deans"
+              ],
+              "admiss": [
+                "get.admission_documents"
+              ],
+              "document": [
+                "get.admission_documents"
+              ],
+              "fee": [
+                "get.fee_structure"
+              ],
+              "structur": [
+                "get.fee_structure"
+              ],
+              "librari": [
+                "get.library"
+              ],
+              "auditorium": [
+                "get.auditorium"
+              ],
+              "train": [
+                "get.training_placement_cell"
+              ],
+              "placement": [
+                "get.training_placement_cell",
+                "get.placement_team",
+                "get.placement_team_members"
+              ],
+              "cell": [
+                "get.training_placement_cell"
+              ],
+              "who": [
+                "get.placement_team"
+              ],
+              "on": [
+                "get.placement_team"
+              ],
+              "team": [
+                "get.placement_team",
+                "get.placement_team_members"
+              ],
+              "member": [
+                "get.placement_team_members"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "tell",
+                "me",
+                "about",
+                "the",
+                "chairman",
+                "what",
+                "is",
+                "mission",
+                "of",
+                "cmr",
+                "technic",
+                "campus",
+                "cours",
+                "are",
+                "offer",
+                "director",
+                "dean",
+                "do",
+                "we",
+                "have",
+                "admiss",
+                "document",
+                "fee",
+                "structur",
+                "librari",
+                "auditorium",
+                "train",
+                "placement",
+                "cell",
+                "who",
+                "on",
+                "team",
+                "member"
+              ],
+              "intents": [
+                "get.chairman",
+                "get.mission",
+                "get.courses",
+                "get.director",
+                "get.deans",
+                "get.admission_documents",
+                "get.fee_structure",
+                "get.library",
+                "get.auditorium",
+                "get.training_placement_cell",
+                "get.placement_team",
+                "get.placement_team_members"
+              ],
+              "perceptrons": [
+                [
+                  1.1621620655059814,
+                  1.1621620655059814,
+                  0.5624682903289795,
+                  1.0775096416473389,
+                  9.810614585876465,
+                  -1.0748093128204346,
+                  -0.27018091082572937,
+                  -0.09556208550930023,
+                  -0.09556208550930023,
+                  -0.09556208550930023,
+                  -0.09556208550930023,
+                  -0.09556208550930023,
+                  -0.021412909030914307,
+                  -0.18379636108875275,
+                  -0.021412909030914307,
+                  -3.870608329772949,
+                  -0.012367116287350655,
+                  -0.012367116287350655,
+                  -0.012367116287350655,
+                  -0.012367116287350655,
+                  -0.1435612142086029,
+                  -0.1435612142086029,
+                  -0.0917295515537262,
+                  -0.0917295515537262,
+                  -3.834005832672119,
+                  -0.595847487449646,
+                  -0.002294864971190691,
+                  -0.9847621917724609,
+                  -0.002294864971190691,
+                  -0.020640434697270393,
+                  -0.020640434697270393,
+                  -0.9804016947746277,
+                  -0.9526457190513611,
+                  0.026098967563040892
+                ],
+                [
+                  -0.2010171115398407,
+                  -0.2010171115398407,
+                  -0.4902941584587097,
+                  0.08254364877939224,
+                  0,
+                  0.17295311391353607,
+                  0.9749928712844849,
+                  2.6446096897125244,
+                  2.6446096897125244,
+                  2.6446096897125244,
+                  2.6446096897125244,
+                  2.6446096897125244,
+                  -0.1533670723438263,
+                  -0.5013813376426697,
+                  -0.1533670723438263,
+                  -0.09793945401906967,
+                  -0.17890028655529022,
+                  -0.17890028655529022,
+                  -0.17890028655529022,
+                  -0.17890028655529022,
+                  -0.28649723529815674,
+                  -0.28649723529815674,
+                  -0.7795284986495972,
+                  -0.7795284986495972,
+                  -0.06446897983551025,
+                  -0.2531355917453766,
+                  -0.5017645359039307,
+                  -0.7993590831756592,
+                  -0.5017645359039307,
+                  -0.23264141380786896,
+                  -0.23264141380786896,
+                  -0.23264141380786896,
+                  0,
+                  -0.16769608019348567
+                ],
+                [
+                  -0.10075689107179642,
+                  -0.10075689107179642,
+                  -0.3319709002971649,
+                  -2.247011184692383,
+                  0,
+                  1.6450324058532715,
+                  -0.39334622025489807,
+                  -0.04773398116230965,
+                  -0.04773398116230965,
+                  -0.04773398116230965,
+                  -0.04773398116230965,
+                  -0.04773398116230965,
+                  4.474140644073486,
+                  2.9201483726501465,
+                  4.474140644073486,
+                  -0.03921244665980339,
+                  -0.6122779846191406,
+                  -0.6122779846191406,
+                  -0.6122779846191406,
+                  -0.6122779846191406,
+                  -1.5511128902435303,
+                  -1.5511128902435303,
+                  -0.19666588306427002,
+                  -0.19666588306427002,
+                  -0.002974453615024686,
+                  -0.2067105770111084,
+                  -0.09104861319065094,
+                  -0.15467169880867004,
+                  -0.09104861319065094,
+                  0,
+                  0,
+                  -0.04280457645654678,
+                  -0.04280457645654678,
+                  0.7720282396402735
+                ],
+                [
+                  1.201857089996338,
+                  1.201857089996338,
+                  0.5828649997711182,
+                  1.0541311502456665,
+                  -3.745391368865967,
+                  -1.0779365301132202,
+                  -0.2888980805873871,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.1432720571756363,
+                  0,
+                  9.776772499084473,
+                  -0.02598879486322403,
+                  -0.02598879486322403,
+                  -0.02598879486322403,
+                  -0.02598879486322403,
+                  -0.1432720571756363,
+                  -0.1432720571756363,
+                  -0.1467503011226654,
+                  -0.1467503011226654,
+                  -3.8642215728759766,
+                  -0.6147067546844482,
+                  -0.02666955441236496,
+                  -1.0861036777496338,
+                  -0.02666955441236496,
+                  -0.05694924294948578,
+                  -0.05694924294948578,
+                  -1.0346052646636963,
+                  -0.9522697925567627,
+                  0.017981143991769775
+                ],
+                [
+                  -0.059890713542699814,
+                  -0.059890713542699814,
+                  -0.44858354330062866,
+                  -1.2882611751556396,
+                  0,
+                  1.2400903701782227,
+                  -0.5742624402046204,
+                  -0.09623248130083084,
+                  -0.09623248130083084,
+                  -0.09623248130083084,
+                  -0.09623248130083084,
+                  -0.09623248130083084,
+                  -0.5746603012084961,
+                  -0.8659877181053162,
+                  -0.5746603012084961,
+                  0,
+                  3.1151480674743652,
+                  3.1151480674743652,
+                  3.1151480674743652,
+                  3.1151480674743652,
+                  -0.24557411670684814,
+                  -0.24557411670684814,
+                  -0.24512545764446259,
+                  -0.24512545764446259,
+                  -0.015221758745610714,
+                  -0.37548089027404785,
+                  -0.15772394835948944,
+                  -0.20979559421539307,
+                  -0.15772394835948944,
+                  0,
+                  0,
+                  -0.03219937905669212,
+                  -0.03219937905669212,
+                  0.5848477874155812
+                ],
+                [
+                  -0.3073025941848755,
+                  -0.3073025941848755,
+                  -1.319818139076233,
+                  1.8937606811523438,
+                  -0.060637764632701874,
+                  0.41689935326576233,
+                  -1.3153971433639526,
+                  -0.23354841768741608,
+                  -0.23354841768741608,
+                  -0.23354841768741608,
+                  -0.23354841768741608,
+                  -0.23354841768741608,
+                  -1.6565176248550415,
+                  2.8830604553222656,
+                  -1.6565176248550415,
+                  -0.004368970636278391,
+                  -0.18819968402385712,
+                  -0.18819968402385712,
+                  -0.18819968402385712,
+                  -0.18819968402385712,
+                  4.5397748947143555,
+                  4.5397748947143555,
+                  -0.5445212125778198,
+                  -0.5445212125778198,
+                  -0.21794769167900085,
+                  -1.0035825967788696,
+                  -0.37954282760620117,
+                  -0.4612552523612976,
+                  -0.37954282760620117,
+                  -0.05374869331717491,
+                  -0.05374869331717491,
+                  -0.05374869331717491,
+                  0,
+                  0.012538846838591735
+                ],
+                [
+                  -0.2176465541124344,
+                  -0.2176465541124344,
+                  -1.056454062461853,
+                  0.7768233418464661,
+                  -0.04716860502958298,
+                  0.9800096750259399,
+                  2.3795719146728516,
+                  -0.8557968139648438,
+                  -0.8557968139648438,
+                  -0.8557968139648438,
+                  -0.8557968139648438,
+                  -0.8557968139648438,
+                  -0.24590107798576355,
+                  -0.7987974286079407,
+                  -0.24590107798576355,
+                  -0.003136850893497467,
+                  -0.2799072265625,
+                  -0.2799072265625,
+                  -0.2799072265625,
+                  -0.2799072265625,
+                  -0.5420478582382202,
+                  -0.5420478582382202,
+                  5.016716957092285,
+                  5.016716957092285,
+                  -0.13360950350761414,
+                  -0.8234732151031494,
+                  -1.2486170530319214,
+                  -1.7644169330596924,
+                  -1.2486170530319214,
+                  -0.5083335638046265,
+                  -0.5083335638046265,
+                  -0.5083335638046265,
+                  0,
+                  0.11576431060422922
+                ],
+                [
+                  1.2357436418533325,
+                  1.2357436418533325,
+                  0.486451119184494,
+                  1.0480257272720337,
+                  -3.855822801589966,
+                  -0.9718248844146729,
+                  -0.3110772669315338,
+                  -0.03779347613453865,
+                  -0.03779347613453865,
+                  -0.03779347613453865,
+                  -0.03779347613453865,
+                  -0.03779347613453865,
+                  0,
+                  -0.03476664051413536,
+                  0,
+                  -3.7524185180664062,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.03476664051413536,
+                  -0.03476664051413536,
+                  0,
+                  0,
+                  9.795928955078125,
+                  -0.744482159614563,
+                  -0.09661174565553665,
+                  -1.2056998014450073,
+                  -0.09661174565553665,
+                  -0.10044009238481522,
+                  -0.10044009238481522,
+                  -1.0687183141708374,
+                  -0.9233005046844482,
+                  0.0666634523530215
+                ],
+                [
+                  -2.338313102722168,
+                  -2.338313102722168,
+                  4.117563247680664,
+                  1.216712236404419,
+                  -0.8144965767860413,
+                  2.473426103591919,
+                  -1.934287428855896,
+                  -0.37977948784828186,
+                  -0.37977948784828186,
+                  -0.37977948784828186,
+                  -0.37977948784828186,
+                  -0.37977948784828186,
+                  -0.4759906530380249,
+                  -1.5516215562820435,
+                  -0.4759906530380249,
+                  -0.7573697566986084,
+                  -0.6192838549613953,
+                  -0.6192838549613953,
+                  -0.6192838549613953,
+                  -0.6192838549613953,
+                  -1.069698691368103,
+                  -1.069698691368103,
+                  -0.8785038590431213,
+                  -0.8785038590431213,
+                  -0.6546804904937744,
+                  6.455602645874023,
+                  -0.5140570998191833,
+                  -0.7412109375,
+                  -0.5140570998191833,
+                  -0.0878685787320137,
+                  -0.0878685787320137,
+                  -0.19208714365959167,
+                  -0.07126980274915695,
+                  0.0058439043121861454
+                ],
+                [
+                  -0.32440686225891113,
+                  -0.32440686225891113,
+                  -0.7740566730499268,
+                  0.22397758066654205,
+                  -0.0780860036611557,
+                  1.2133615016937256,
+                  1.2412023544311523,
+                  -0.5857529044151306,
+                  -0.5857529044151306,
+                  -0.5857529044151306,
+                  -0.5857529044151306,
+                  -0.5857529044151306,
+                  -0.21828217804431915,
+                  -0.640805184841156,
+                  -0.21828217804431915,
+                  -0.027863390743732452,
+                  -0.25943443179130554,
+                  -0.25943443179130554,
+                  -0.25943443179130554,
+                  -0.25943443179130554,
+                  -0.39140596985816956,
+                  -0.39140596985816956,
+                  -1.2258108854293823,
+                  -1.2258108854293823,
+                  0,
+                  -0.4354778826236725,
+                  4.454016208648682,
+                  2.9336187839508057,
+                  4.454016208648682,
+                  -1.3330469131469727,
+                  -1.3330469131469727,
+                  -1.5102636814117432,
+                  -0.1585305780172348,
+                  -0.23443913965687585
+                ],
+                [
+                  -1.117866039276123,
+                  -1.117866039276123,
+                  -1.14186692237854,
+                  1.2427257299423218,
+                  -0.05980803072452545,
+                  -2.2162649631500244,
+                  1.5864132642745972,
+                  -0.28406399488449097,
+                  -0.28406399488449097,
+                  -0.28406399488449097,
+                  -0.28406399488449097,
+                  -0.28406399488449097,
+                  -0.012866091914474964,
+                  -0.11769658327102661,
+                  -0.012866091914474964,
+                  -0.03695498779416084,
+                  -0.00844027753919363,
+                  -0.00844027753919363,
+                  -0.00844027753919363,
+                  -0.00844027753919363,
+                  -0.09544374793767929,
+                  -0.09544374793767929,
+                  -0.47286856174468994,
+                  -0.47286856174468994,
+                  -0.012782343663275242,
+                  -0.01242012344300747,
+                  -1.1355758905410767,
+                  1.4944261312484741,
+                  -1.1355758905410767,
+                  3.602353096008301,
+                  3.602353096008301,
+                  2.6385560035705566,
+                  -0.9407485723495483,
+                  0.11894792886870724
+                ],
+                [
+                  1.3928618431091309,
+                  1.3928618431091309,
+                  1.364161729812622,
+                  -3.5030713081359863,
+                  -0.8615599274635315,
+                  -0.18283575773239136,
+                  -0.9412042498588562,
+                  -0.015242951922118664,
+                  -0.015242951922118664,
+                  -0.015242951922118664,
+                  -0.015242951922118664,
+                  -0.015242951922118664,
+                  -0.05588913708925247,
+                  -0.05588913708925247,
+                  -0.05588913708925247,
+                  -0.8573788404464722,
+                  -0.026199832558631897,
+                  -0.026199832558631897,
+                  -0.026199832558631897,
+                  -0.026199832558631897,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -0.8040830492973328,
+                  -0.014875820837914944,
+                  -0.01685207709670067,
+                  3.0127272605895996,
+                  -0.01685207709670067,
+                  -0.8840242028236389,
+                  -0.8840242028236389,
+                  3.0405900478363037,
+                  3.925325393676758,
+                  0.15722880773867684
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "Tell me about the chairman"
+      ],
+      [
+        "en",
+        "What is the mission of CMR Technical Campus?"
+      ],
+      [
+        "en",
+        "What courses are offered?"
+      ],
+      [
+        "en",
+        "Tell me about the director"
+      ],
+      [
+        "en",
+        "What deans do we have?"
+      ],
+      [
+        "en",
+        "What are the admission documents?"
+      ],
+      [
+        "en",
+        "What is the fee structure?"
+      ],
+      [
+        "en",
+        "Tell me about the library"
+      ],
+      [
+        "en",
+        "What about the auditorium?"
+      ],
+      [
+        "en",
+        "What is the training placement cell?"
+      ],
+      [
+        "en",
+        "Who is on the placement team?"
+      ],
+      [
+        "en",
+        "Tell me about placement team members"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {}
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
